@@ -48,7 +48,7 @@ def train_and_compare() -> Tuple[
     ]
     df = df.drop(cols_to_drop, axis=1)
 
-    for col in ["STATUS", "PRODUCTLINE", "YEAR_ID", "DEALSIZE"]:
+    for col in ["STATUS", "PRODUCTLINE", "DEALSIZE"]:
         df[col], _ = assign_numbers(df[col])
 
     X = df.drop("SALES", axis=1)
@@ -209,7 +209,7 @@ def run_comparison():
 
 def launch_ui():
     with gr.Blocks(title="Sales Model Comparison and Forecasting") as demo:
-        gr.Markdown("# 🏎️ Classic-Cars Sales - Model Comparison & Forecasting")
+        gr.Markdown("# Classic Sales - Model Comparison & Forecasting")
         gr.Markdown(
             "Click **Run comparison** to train models, evaluate them, "
             "and see a two-year sales forecast."
