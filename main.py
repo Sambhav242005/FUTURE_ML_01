@@ -107,7 +107,7 @@ def train_and_compare() -> Tuple[
     ax.bar(results_df["Model"], results_df["MAE"])
     ax.set_ylabel("MAE (lower is better)")
     ax.set_title("Model Comparison - Mean Absolute Error")
-    ax.tick_params(axis="x")
+    ax.tick_params(axis="x",rotation=15)
 
     # 3-b choose best model
     best_model_name = results_df.iloc[0]["Model"]
